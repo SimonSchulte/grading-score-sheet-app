@@ -1,0 +1,5 @@
+<mat-form-field class="example-full-width">
+  <mat-label>Maximale Punktzahl</mat-label>
+  <input matInput [value]="maximumPoints.maximumPoints()" type="number" #maximumPointsField
+    (input)="maximumPoints.maximumPoints.set(maximumPointsField.valueAsNumber)" [pattern]="integerPattern">
+</mat-form-field>
