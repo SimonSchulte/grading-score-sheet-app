@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
 
-    { path: 'wertung/wirtschaftsgymnasium', component: WirtschaftsgymnasiumComponent},
+    { path: '', component: WirtschaftsgymnasiumComponent},
+    { path: 'wirtschaftsgymnasium', component: WirtschaftsgymnasiumComponent},
 
 ];
