@@ -7,8 +7,13 @@ import { MatInputModule } from '@angular/material/input';
 @Component({
   standalone: true,
   selector: 'app-grade',
-  templateUrl: './grade.component.html',
-  imports: [FormsModule, MatFormFieldModule, MatInputModule],
+  template: `
+    <mat-form-field >
+      <mat-label>Note</mat-label>
+      <input matInput class="grade-field" [value]="gradeSignal.Grade().name" readonly="true">
+    </mat-form-field>
+  `, 
+  imports: [FormsModule, MatFormFieldModule, MatInputModule]
 })
 export class GradeComponent implements OnInit {
 

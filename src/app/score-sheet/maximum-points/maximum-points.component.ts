@@ -1,4 +1,4 @@
-import { MaximumPointsSignalService } from './../../signals/maximumPointsSignal.service';
+import { MaximumPointsSignalService } from '../signals/maximumPointsSignal.service';
 import { Component, OnInit, signal } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';

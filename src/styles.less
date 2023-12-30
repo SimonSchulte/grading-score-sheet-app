@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-
+*{margin:0; padding:0} 
 html,
 body {
-  height: 100%;
-  background-color: azure;
+  min-height:100%;
+  height: auto;
 }
 
 body {
@@ -12,13 +12,21 @@ body {
 }
 
 table {
+  margin: 5px;
+}
+
+mat-form-field {
   margin: 10px;
 }
 
-mat-form-field{
-  margin: 10px;
+.grade-field{
+  font-weight: bold;
 }
 
-.demo-row-is-clicked {
-  font-weight: bold; 
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.grading-table{
+  margin: 10px;
 }

@@ -1,33 +1,51 @@
 <app-achievedPoints></app-achievedPoints>
+
 <app-maximum-points></app-maximum-points>
+
 <app-percentage></app-percentage>
+
 <app-grade [gradeSignal]="gradeSignal"></app-grade>
 
-<div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource">
+<mat-divider></mat-divider>
 
-    <!-- Define columns -->
-    <ng-container matColumnDef="minPercentage">
-      <th mat-header-cell *matHeaderCellDef>von</th>
-      <td mat-cell *matCellDef="let element">{{element.minPercentage}}%</td>
-    </ng-container>
+<mat-accordion class="grading-table">
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Notenfindungsgrundlage
+      </mat-panel-title>
+      <mat-panel-description>
+        tabllarische darstellung der Noten
+      </mat-panel-description>
+    </mat-expansion-panel-header>
 
-    <ng-container matColumnDef="maxPercentage">
-      <th mat-header-cell *matHeaderCellDef>bis</th>
-      <td mat-cell *matCellDef="let element">{{element.maxPercentage}}%</td>
-    </ng-container>
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
 
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Note</th>
-      <td mat-cell *matCellDef="let element">{{element.name}}</td>
-    </ng-container>
+        <!-- Define columns -->
+        <ng-container matColumnDef="minPercentage">
+          <th mat-header-cell *matHeaderCellDef>von</th>
+          <td mat-cell *matCellDef="let element">{{element.minPercentage}}%</td>
+        </ng-container>
 
-    <ng-container matColumnDef="points">
-      <th mat-header-cell *matHeaderCellDef>Notenpunkte</th>
-      <td mat-cell *matCellDef="let element">{{element.points}}</td>
-    </ng-container>
+        <ng-container matColumnDef="maxPercentage">
+          <th mat-header-cell *matHeaderCellDef>bis</th>
+          <td mat-cell *matCellDef="let element">{{element.maxPercentage}}%</td>
+        </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-</div>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Note</th>
+          <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="points">
+          <th mat-header-cell *matHeaderCellDef>Notenpunkte</th>
+          <td mat-cell *matCellDef="let element">{{element.points}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

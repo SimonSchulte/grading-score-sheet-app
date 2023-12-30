@@ -1,7 +1,7 @@
 import { Injectable, computed, effect, signal } from '@angular/core';
 import { WirtschaftsgymasiumScooring, Score } from './score';
 import { AchievedPointsComponent } from '../score-sheet/achievedPoints/achievedPoints.component';
-import { AchivedPercentageSignalService } from '../signals/AchivedPercentageSignal.service';
+import { AchivedPercentageSignalService } from '../score-sheet/signals/AchivedPercentageSignal.service';
 
 @Injectable({
     providedIn: 'root'
@@ -52,6 +52,21 @@ export class WirtschafsgymnasiumGrade extends GradeSignal {
             });
             this.Grade.set(grade[0]);
         }, { allowSignalWrites: true })
+    }
+
+}
+
+
+
+
+@Injectable({
+    providedIn: 'root'
+})
+export class SelectedScoringSignal {
+
+    name = signal("");
+    constructor() {
+
     }
 
 }

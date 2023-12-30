@@ -1,4 +1,4 @@
-import { WirtschaftsgymnasiumComponent } from './wirtschaftsgymnasium/wirtschaftsgymnasium.component';
+import { WirtschaftsgymnasiumComponent } from './components/scores/wirtschaftsgymnasium/wirtschaftsgymnasium.component';
 import { Routes } from '@angular/router'; 
 
 export const routes: Routes = [
