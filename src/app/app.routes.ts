@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router'; 
-import { WirtschaftsgymnasiumComponent } from './components/scores/wirtschaftsgymnasium/wirtschaftsgymnasium.component';
 import { HoeherehandelsschuleComponent } from './components/scores/hoeherehandelsschule/Hoeherehandelsschule.component';
+import { WirtschaftsgymnasiumComponent } from './components/scores/wirtschaftsgymnasium/Wirtschaftsgymnasium.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 export const routes: Routes = [
 
-    // { path: '', component: WirtschaftsgymnasiumComponent},
+    { path: '', component: LandingComponent},
     { path: 'wirtschaftsgymnasium', component: WirtschaftsgymnasiumComponent},
     { path: 'hoeherehandelsschule', component: HoeherehandelsschuleComponent},
 
