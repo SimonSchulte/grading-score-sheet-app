@@ -2,12 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, signal } from '@angular/core';
 import { Score } from '../../../../model/score';
 import { Scooring } from '../../../../model/Scooring';
-
-
-export class ScooringService {
-
-    Scooring = signal(new Array<Score>());
-}
+import { ScooringService } from '../../Scooring.Service';
 
 @Injectable({
     providedIn: 'root'

@@ -3,6 +3,7 @@ import { AchivedPercentageSignalService } from '../../../../signals/AchivedPerce
 import { WirtschaftsgymnasiumScooringService } from './Wirtschaftsgymnasium.Scooring.service';
 import { GradeSignal } from '../../../../signals/GradeSignal.service';
 
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Injectable({
@@ -13,20 +14,9 @@ export class WirtschafsgymnasiumGrade extends GradeSignal {
     /**
      *
      */
-    constructor(private score: WirtschaftsgymnasiumScooringService, private percentage: AchivedPercentageSignalService) {
-        super();
-
-        effect(() => {
-            let actualPercentage = this.percentage.Percentage();
-            console.log(`The percentage for the is: ${actualPercentage}`);
-            let grade = this.score.Scooring().filter(range => {
-                return actualPercentage >= range.minPercentage && actualPercentage <= range.maxPercentage;
-            });
-            if (grade[0] != undefined) {
-                console.log("Signaling new grade");
-                this.Grade.set(grade[0]);
-            }
-        }, { allowSignalWrites: true });
+    constructor(score: WirtschaftsgymnasiumScooringService, percentage: AchivedPercentageSignalService, _snackBar: MatSnackBar) {
+        super(score, percentage, _snackBar);
     }
+
 
 }

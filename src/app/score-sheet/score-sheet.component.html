@@ -1,12 +1,33 @@
-<app-achievedPoints></app-achievedPoints>
+<form [formGroup]="gradingForm">
+  <mat-form-field class="example-full-width">
+    <mat-label>Erreichte Punkte</mat-label>
+    <input matInput [value]="achievedPoints.achievedPoints()" type="number" #achievedPointsField
+      (input)="achievedPoints.achievedPoints.set(achievedPointsField.valueAsNumber)"
+      formControlName="achievedPointsField" [max]="maximumPointsSignal.maximumPoints()" [pattern]="integerPattern">
+  </mat-form-field>
 
-<app-maximum-points></app-maximum-points>
+  <mat-form-field class="example-full-width">
+    <mat-label>Maximale Punktzahl</mat-label>
+    <input matInput [value]="maximumPoints.maximumPoints()" type="number" #maximumPointsField
+      (input)="maximumPoints.maximumPoints.set(maximumPointsField.valueAsNumber)" [pattern]="integerPattern">
+  </mat-form-field>
 
-<app-percentage></app-percentage>
+  <mat-form-field class="example-full-width">
+    <mat-label>Prozent</mat-label>
+    <input matInput [value]="achievedPercentage.Percentage()" formControlName="percentageField" readonly="true" type="number">
+  </mat-form-field>
 
-<app-grade [gradeSignal]="gradeSignal"></app-grade>
-<app-grade-points [gradeSignal]="gradeSignal"></app-grade-points>
+  <mat-form-field class="example-full-width">
+    <mat-label>Note</mat-label>
+    <input matInput class="grade-field" [value]="gradeSignal.Grade().name" readonly="true">
+  </mat-form-field>
 
+  <mat-form-field class="example-full-width">
+    <mat-label>Notenpunkte</mat-label>
+    <input matInput class="grade-field" [value]="gradeSignal.Grade().points" type="number" readonly="true">
+  </mat-form-field>
+
+</form>
 <mat-divider></mat-divider>
 
 <mat-accordion class="grading-table">
