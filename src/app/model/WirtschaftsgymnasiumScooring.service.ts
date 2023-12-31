@@ -1,16 +1,27 @@
-import { Injectable, computed, effect, signal } from '@angular/core';
-import { WirtschaftsgymasiumScooring, Score } from './score';
-import { AchievedPointsComponent } from '../score-sheet/achievedPoints/achievedPoints.component';
+import { HttpClient } from '@angular/common/http';
+import { Injectable, effect, signal } from '@angular/core';
+import { Score } from './score';
 import { AchivedPercentageSignalService } from '../score-sheet/signals/AchivedPercentageSignal.service';
+import { Scooring } from './Scooring';
+
+
+export class ScooringService {
+
+    Scooring = signal(new Array<Score>());
+}
 
 @Injectable({
     providedIn: 'root'
 })
-export class WirtschaftsgymnasiumScooringService {
+export class WirtschaftsgymnasiumScooringService extends ScooringService {
 
-    Scooring = signal(new WirtschaftsgymasiumScooring().scores);
 
-    constructor() {
+    constructor(private HttpClient: HttpClient) {
+        super();
+
+        new Scooring('/assets/wirtschaftsgymnasium.csv', this.HttpClient).getScore().subscribe(
+            data => this.Scooring.set(data)
+        );
     }
 
 }
@@ -50,7 +61,10 @@ export class WirtschafsgymnasiumGrade extends GradeSignal {
             let grade = this.score.Scooring().filter(range => {
                 return actualPercentage >= range.minPercentage && actualPercentage <= range.maxPercentage;
             });
-            this.Grade.set(grade[0]);
+            if (grade[0] != undefined) {
+                console.log("Signaling new grade")
+                this.Grade.set(grade[0]);
+            }
         }, { allowSignalWrites: true })
     }
 

@@ -1,0 +1,17 @@
+maxPercentage;minPercentage;grade;points
+100;95;Sehr gut +;15
+95;90;Sehr gut;14
+90;85;Sehr gut -;13
+85;80;Gut +;12
+80;75;Gut -;11
+75;70;Befriedigend +;10
+70;65;Befriedigend;9
+65;60;Befriedigend -;8
+60;55;Ausreichend +;7
+55;50;Ausreichend;6
+50;45;Ausreichend -;5
+45;40;Mangelhaft +;4
+40;33;Mangelhaft;3
+33;27;Mangelhaft -;2
+27;20;Ungenügend +;1
+20;0;Ungenügend;0

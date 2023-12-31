@@ -7,7 +7,13 @@ import { FormsModule } from '@angular/forms';
 @Component({
   standalone: true,
   selector: 'app-maximum-points',
-  templateUrl: './maximum-points.component.html',
+  template: `
+  <mat-form-field class="example-full-width">
+    <mat-label>Maximale Punktzahl</mat-label>
+    <input matInput [value]="maximumPoints.maximumPoints()" type="number" #maximumPointsField
+      (input)="maximumPoints.maximumPoints.set(maximumPointsField.valueAsNumber)" [pattern]="integerPattern">
+  </mat-form-field>
+  `,
   imports: [FormsModule, MatFormFieldModule, MatInputModule],
 })
 export class MaximumPointsComponent implements OnInit {
