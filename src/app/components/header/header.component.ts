@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   template: `
     <mat-toolbar color="primary"> 
       <mat-toolbar-row>
-         <button mat-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
+         <button mat-button [matMenuTriggerFor]="menu">
           <mat-icon>menu</mat-icon>
         </button>
         <span>Notenspicker</span>
