@@ -1,4 +1,4 @@
-import { AchivedPercentageSignalService } from '../signals/AchivedPercentageSignal.service';
+import { AchivedPercentageSignalService } from '../../signals/AchivedPercentageSignal.service';
 
 import { Component, OnInit } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';

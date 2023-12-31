@@ -4,13 +4,14 @@ import { Score } from '../model/score';
 import { MaximumPointsComponent } from './maximum-points/maximum-points.component';
 import { AchievedPointsComponent } from './achievedPoints/achievedPoints.component';
 import { PercentageComponent } from './percentage/percentage.component';
-import { GradeSignal, ScooringService } from '../model/WirtschaftsgymnasiumScooring.service';
 import { GradeComponent } from './grade/grade.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClient } from '@angular/common/http';
 import { GradePointsComponent } from './gradePoints/gradePoints.component';
+import { GradeSignal } from '../signals/GradeSignal.service';
+import { ScooringService } from '../components/scores/wirtschaftsgymnasium/signals/Wirtschaftsgymnasium.Scooring.service';
 
 @Component({
   standalone: true,

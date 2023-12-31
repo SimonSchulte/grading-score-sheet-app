@@ -1,6 +1,6 @@
 import { Injectable, computed } from '@angular/core';
 import { AchivedPointsSignalService } from './AchivedPointsSignal.service';
-import { MaximumPointsSignalService } from './maximumPointsSignal.service';
+import { MaximumPointsSignalService } from './MaximumPointsSignal.service';
 
 @Injectable({
     providedIn: 'root'

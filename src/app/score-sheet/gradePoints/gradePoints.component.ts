@@ -1,8 +1,8 @@
 import { Component, Input, OnInit, signal } from '@angular/core';
-import { GradeSignal } from '../../model/WirtschaftsgymnasiumScooring.service';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { GradeSignal } from '../../signals/GradeSignal.service';
 
 @Component({
   standalone: true,
