@@ -6,7 +6,7 @@ While enjoying a espresso, is observed my wife correcting exams and noticed, tha
 
 When asked, she explained "I have to calculate the percentage of points achieved and then comapre it to the scoring table provided by the school". A dreadfull taks of switching and typing...
 
-I decided to help her and srape a simple Angular App using the scoring tables she provided. The result is '[Der Notenspicker](https://simonschulte.github.io/grading-score-sheet-app/wirtschaftsgymnasium)' hosted at GitHub-Pages.
+I decided to help her and srape a simple Angular App using the scoring tables she provided. The result is '[Der Notenspicker](https://simonschulte.github.io/grading-score-sheet-app/)' hosted at GitHub-Pages.
 
 Is calculates the exam grade based on provided maximum points and achieved points.
 
