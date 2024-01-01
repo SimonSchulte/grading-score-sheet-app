@@ -13,7 +13,7 @@ export class HoeherehandelsschuleScooringService extends ScooringService {
     constructor(private HttpClient: HttpClient) {
         super();
 
-        new Scooring('/assets/hoeherehandelsschule.csv', this.HttpClient).getScore().subscribe(
+        new Scooring('/grading-score-sheet-app/assets/hoeherehandelsschule.csv', this.HttpClient).getScore().subscribe(
             data => this.Scooring.set(data)
         );
     }

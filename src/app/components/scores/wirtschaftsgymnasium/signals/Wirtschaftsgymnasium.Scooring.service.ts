@@ -13,7 +13,7 @@ export class WirtschaftsgymnasiumScooringService extends ScooringService {
     constructor(private HttpClient: HttpClient) {
         super();
 
-        new Scooring('/assets/wirtschaftsgymnasium.csv', this.HttpClient).getScore().subscribe(
+        new Scooring('/grading-score-sheet-app/assets/wirtschaftsgymnasium.csv', this.HttpClient).getScore().subscribe(
             data => this.Scooring.set(data)
         );
     }
