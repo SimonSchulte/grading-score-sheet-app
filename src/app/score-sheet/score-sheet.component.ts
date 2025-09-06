@@ -15,19 +15,18 @@ import { MatInputModule } from '@angular/material/input';
 import { AchivedPointsSignalService } from '../signals/AchivedPointsSignal.service';
 
 @Component({
-  standalone: true,
-  selector: 'app-score-sheet',
-  templateUrl: './score-sheet.component.html',
-  imports: [
-    MatTableModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatGridListModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule
-  ]
+    selector: 'app-score-sheet',
+    templateUrl: './score-sheet.component.html',
+    imports: [
+        MatTableModule,
+        MatDividerModule,
+        MatExpansionModule,
+        MatGridListModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule
+    ]
 })
 export class ScoreSheetComponent {
 

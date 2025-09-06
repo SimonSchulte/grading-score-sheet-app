@@ -6,12 +6,11 @@ import {Score} from "../../../../model/score";
 import {SelectedScoringSignal} from "../../../../signals/SelectedScoringSignal.service";
 
 @Component({
-  standalone: true,
-  selector: 'app-sek2-allgemein',
-  template: `
+    selector: 'app-sek2-allgemein',
+    template: `
     <app-score-sheet [scoresSignal]=scooring [gradeSignal]=grade></app-score-sheet>
   `,
-  imports: [ScoreSheetComponent]
+    imports: [ScoreSheetComponent]
 })
 export class Sek2AllgemeinComponent implements OnInit {
 

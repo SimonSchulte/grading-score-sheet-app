@@ -34,8 +34,7 @@ import { MatIconModule } from '@angular/material/icon';
       }
     `,
     ],
-    standalone: true,
-    imports: [MatButtonModule, MatSnackBarLabel, MatSnackBarActions, MatSnackBarAction, MatIconModule],
+    imports: [MatButtonModule, MatSnackBarLabel, MatSnackBarActions, MatSnackBarAction, MatIconModule]
 })
 export class InvalidPercentageAnnotatedComponent {
     snackBarRef = inject(MatSnackBarRef);

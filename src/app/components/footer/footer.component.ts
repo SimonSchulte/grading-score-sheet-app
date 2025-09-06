@@ -4,9 +4,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-  standalone: true,
-  selector: 'app-footer',
-  template: `
+    selector: 'app-footer',
+    template: `
     <mat-toolbar class="mat-primary"> 
       <div class="footer-content">  
         <div>© 2023 - Simon Schulte</div>
@@ -16,7 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
       </div>
     </mat-toolbar>
   `,
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule]
+    imports: [MatToolbarModule, MatButtonModule, MatIconModule]
 })
 export class FooterComponent implements OnInit {
 

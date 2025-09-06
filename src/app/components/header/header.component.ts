@@ -7,9 +7,8 @@ import { SelectedScoringSignal } from '../../signals/SelectedScoringSignal.servi
 import { MatMenuModule } from '@angular/material/menu';
 import { Router } from '@angular/router';
 @Component({
-  standalone: true,
-  selector: 'app-header',
-  template: `
+    selector: 'app-header',
+    template: `
     <mat-toolbar color="primary">
       <mat-toolbar-row>
          <button mat-button [matMenuTriggerFor]="menu">
@@ -29,7 +28,7 @@ import { Router } from '@angular/router';
 
   </mat-toolbar>
   `,
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule]
+    imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule]
 })
 export class HeaderComponent implements OnInit {
 
