@@ -7,28 +7,29 @@ import { SelectedScoringSignal } from '../../signals/SelectedScoringSignal.servi
 import { MatMenuModule } from '@angular/material/menu';
 import { Router } from '@angular/router';
 @Component({
-    selector: 'app-header',
-    template: `
+  selector: 'app-header',
+  template: `
     <mat-toolbar color="primary">
       <mat-toolbar-row>
-         <button mat-button [matMenuTriggerFor]="menu">
+        <button mat-button [matMenuTriggerFor]="menu">
           <mat-icon>menu</mat-icon>
         </button>
         <span>Notenspicker</span>
-    </mat-toolbar-row>
-    <mat-toolbar-row >
-      <span>{{selectedScoring.name()}}</span>
-      <span class="example-spacer"></span>
-    </mat-toolbar-row>
+      </mat-toolbar-row>
+      <mat-toolbar-row>
+        <span>{{ selectedScoring.name() }}</span>
+        <span class="example-spacer"></span>
+      </mat-toolbar-row>
 
       <mat-menu #menu="matMenu">
         <button mat-menu-item (click)="navigate('Sek1Politik')">SeK I - Politik</button>
         <button mat-menu-item (click)="navigate('SeK2Allgemein')">SeK 2 - Allgemein</button>
       </mat-menu>
 
-  </mat-toolbar>
+    </mat-toolbar>
   `,
-    imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule]
+  standalone: true,
+  imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule]
 })
 export class HeaderComponent implements OnInit {
 

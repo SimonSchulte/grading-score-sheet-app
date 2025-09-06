@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
     template: `
   <div class="langing-page-content"> Bildungsgang über das Menü auswählen. </div>
   `,
-    standalone: false
+  standalone: true
 })
 export class LandingComponent implements OnInit {
 

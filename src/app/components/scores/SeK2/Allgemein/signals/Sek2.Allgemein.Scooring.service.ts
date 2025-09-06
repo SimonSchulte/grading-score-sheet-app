@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable } from '@angular/core';
 import {ScooringService} from "../../../Scooring.Service";
 
 import { Observable, of } from 'rxjs';

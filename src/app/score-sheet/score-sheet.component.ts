@@ -5,7 +5,6 @@ import { Score } from '../model/score';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { HttpClient } from '@angular/common/http';
 import { GradeSignal } from '../signals/GradeSignal.service';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MaximumPointsSignalService } from '../signals/MaximumPointsSignal.service';
@@ -15,18 +14,19 @@ import { MatInputModule } from '@angular/material/input';
 import { AchivedPointsSignalService } from '../signals/AchivedPointsSignal.service';
 
 @Component({
-    selector: 'app-score-sheet',
-    templateUrl: './score-sheet.component.html',
-    imports: [
-        MatTableModule,
-        MatDividerModule,
-        MatExpansionModule,
-        MatGridListModule,
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        ReactiveFormsModule
-    ]
+  selector: 'app-score-sheet',
+  templateUrl: './score-sheet.component.html',
+  standalone: true,
+  imports: [
+    MatTableModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule
+  ]
 })
 export class ScoreSheetComponent {
 
@@ -46,7 +46,6 @@ export class ScoreSheetComponent {
 
 
   constructor(private fb: FormBuilder,
-    private httpClient: HttpClient,
     public maximumPointsSignal: MaximumPointsSignalService,
     public achievedPoints: AchivedPointsSignalService,
     public achievedPercentage: AchivedPercentageSignalService,

@@ -1,7 +1,5 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable, signal } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { ScooringService } from '../../../Scooring.Service';
-import {Scooring} from "../../../../../model/Scooring";
 import {Score} from "../../../../../model/score";
 import {Observable, of} from "rxjs";
 
