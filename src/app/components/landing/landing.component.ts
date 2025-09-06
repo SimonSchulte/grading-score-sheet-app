@@ -11,7 +11,7 @@ import {SeK1PolitikComponent} from "../scores/SeK1/SoWi/SeK1.Politik.component";
         <mat-tab label="SeK I | Politik">
           <app-sek1-politik/>
         </mat-tab>
-        <mat-tab label="SeK 2 | Algemein ">
+        <mat-tab label="SeK II | Algemein ">
           <app-sek2-allgemein/>
         </mat-tab>
       </mat-tab-group>
