@@ -11,21 +11,8 @@ import { Router } from '@angular/router';
   template: `
     <mat-toolbar color="primary">
       <mat-toolbar-row>
-        <button mat-button [matMenuTriggerFor]="menu">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <span>Notenspicker</span>
+        <span>Der Notenspicker</span>
       </mat-toolbar-row>
-      <mat-toolbar-row>
-        <span>{{ selectedScoring.name() }}</span>
-        <span class="example-spacer"></span>
-      </mat-toolbar-row>
-
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="navigate('Sek1Politik')">SeK I - Politik</button>
-        <button mat-menu-item (click)="navigate('SeK2Allgemein')">SeK 2 - Allgemein</button>
-      </mat-menu>
-
     </mat-toolbar>
   `,
   standalone: true,
