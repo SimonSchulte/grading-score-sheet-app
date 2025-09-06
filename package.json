@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "github-build": "ng build --configuration production --base-href ng update @angular/core@18 @angular/cli@18https://simonschulte.github.io/grading-score-sheet-app/",
+    "github-deploy": "npx angular-cli-ghpages --dir=dist/grading-score-sheet-app/browser --no-silent",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
