@@ -63,7 +63,7 @@ export class ScoreSheetComponent {
 
   ngOnInit() {
     this.gradingForm = new FormGroup({
-      achievedPointsField: new FormControl(0) 
+      achievedPointsField: new FormControl(0)
     });
 
   }

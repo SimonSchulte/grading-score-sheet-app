@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   standalone: true,
   selector: 'app-header',
   template: `
-    <mat-toolbar color="primary"> 
+    <mat-toolbar color="primary">
       <mat-toolbar-row>
          <button mat-button [matMenuTriggerFor]="menu">
           <mat-icon>menu</mat-icon>
@@ -23,8 +23,8 @@ import { Router } from '@angular/router';
     </mat-toolbar-row>
 
       <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="navigate('wirtschaftsgymnasium')">Wirtschaftsgymnasium</button>
-        <button mat-menu-item (click)="navigate('hoeherehandelsschule')">Höhere Handelsschule</button>
+        <button mat-menu-item (click)="navigate('Sek1Politik')">SeK I - Politik</button>
+        <button mat-menu-item (click)="navigate('SeK2Allgemein')">SeK 2 - Allgemein</button>
       </mat-menu>
 
   </mat-toolbar>

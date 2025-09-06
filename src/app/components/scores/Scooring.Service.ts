@@ -1,9 +1,7 @@
-import { signal } from '@angular/core';
-import { Score } from '../../model/score';
-
-
+import {signal} from '@angular/core';
+import {Score} from '../../model/score';
 
 export class ScooringService {
 
-    Scooring = signal(new Array<Score>());
+  Scooring = signal(new Array<Score>());
 }
